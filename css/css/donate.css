@@ -1,0 +1,57 @@
+.bg-pix{
+	--s: 60px; /* control the size */
+
+	--_g: #0000 83%,#a7a7a70f 85% 99%,#0000 101%;
+	background:
+	radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
+	radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
+	radial-gradient(29% 27% at top   ,var(--_g)) 0 calc(var(--s)/ 2),
+	radial-gradient(29% 27% at bottom,var(--_g)) 0 calc(var(--s)/-2)
+	#476074;
+	background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+.pix-container {
+	display: flex;
+	justify-content: center;
+}
+.pix-card {
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+}
+.pix {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	margin:5px;
+}
+.chave {
+	border: 1px solid grey;
+	border-radius: 5px 0 0 5px;
+	width: 100%;
+	align-content: center;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	cursor: pointer;
+
+}
+.copiar-chave {
+	border-radius: 0 5px 5px 0;
+	border: 1px solid grey;
+	width: 50px;
+}
+.copiado {
+	margin-top: 30px;
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
